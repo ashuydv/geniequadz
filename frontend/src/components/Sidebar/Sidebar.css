@@ -1,0 +1,41 @@
+.sidebar {
+    flex: 1;
+    height: 100%;
+    position: sticky;
+    padding: 20px;
+    border-right: 1px solid;
+    width: 250px;
+    top: 11%;
+    overflow-y: scroll;
+}
+
+.sidebar ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px !important;
+}
+
+.sidebar ul .li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    justify-content: flex-start;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.sidebar ul .li span,
+.sidebar ul .li .icon {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul .li .icon {
+    margin-right: 5px;
+}
