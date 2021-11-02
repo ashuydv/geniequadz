@@ -31,7 +31,6 @@
     flex: 1;
     height: calc(100vh - 50px);
     position: sticky !important;
-    padding: 20px;
     border-right: 1px solid;
     width: 250px;
     margin-top: 5rem;

@@ -3,30 +3,26 @@ import "./Dashboard.css";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Badge from "@mui/material/Badge";
-import { Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import { PieChart } from "react-minimal-pie-chart";
+import { IconButton } from "@mui/material";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const data = {
-  labels: [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25,
-  ],
-  datasets: [
-    {
-      label: "Rainfall",
-      lineTension: 0.5,
-      backgroundColor: "blue",
-      borderWidth: 1,
-      borderColor: "black",
-      data: [
-        30, 45, 60, 90, 30, 45, 60, 90, 30, 45, 60, 90, 30, 45, 60, 90, 30, 45,
-        60, 90, 60, 90, 30, 45, 75,
-      ],
-    },
-  ],
+const dataMock = [
+  { title: "Live Sessions Attended", value: 10, color: "#E38629" },
+  { title: "Recorded Sessions", value: 15, color: "#C13C37" },
+];
+
+const defaultLabelStyle = {
+  fontSize: "8px",
+  fontFamily: "sans-serif",
+  fill: "#fff",
 };
 
 const Dashboard = () => {
+
+  const shiftSize = 1;
+
   return (
     <div>
       <div className="dashboard">
@@ -42,19 +38,15 @@ const Dashboard = () => {
           >
             <Grid xs={6}>
               <Paper elevation={3} className="p-5 mt-5 mr-5">
-                <Line
-                  data={data}
-                  options={{
-                    title: {
-                      display: true,
-                      text: "Average Rainfall per month",
-                      fontSize: 20,
-                    },
-                    legend: {
-                      display: true,
-                      position: "right",
-                    },
+                <PieChart
+                  data={dataMock}
+                  radius={PieChart.defaultProps.radius - shiftSize}
+                  segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
+                  label={({ dataEntry }) => dataEntry.value}
+                  labelStyle={{
+                    ...defaultLabelStyle,
                   }}
+                  style={{ height: '250px' }}
                 />
               </Paper>
               <Paper elevation={3} className="p-5 mt-5 mr-5">
@@ -108,9 +100,14 @@ const Dashboard = () => {
             </Grid>
             <Grid xs={6}>
               <Paper elevation={3} className="p-5 mt-5 mr-5">
+                <div className=" flex items-start justify-between">
                 <h2 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   Resume Your Course
                 </h2>
+                <IconButton>
+                  <PlayArrowIcon/>
+                </IconButton>
+                </div>
                 <h3>Web Development</h3>
                 <input
                   className="custom-input w-full mt-3"

@@ -10,71 +10,92 @@ import { Link } from "react-router-dom";
 import Notes from "@mui/icons-material/Notes";
 import LibraryBooksSharpIcon from "@mui/icons-material/LibraryBooksSharp";
 import CardMembershipSharpIcon from "@mui/icons-material/CardMembershipSharp";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { Divider } from "@mui/material";
+
 const Sidebar = () => {
   return (
     <div>
       <div className="sidebar">
+        <Divider/>
         <ul>
-          <Link
-            to="/dashboard"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <DashboardIcon className="icon" />
-            Dashboard
-          </Link>
-          <Link
-            to="/lectures"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <Book className="icon" />
-            Lectures
-          </Link>
-          <Link
-            to="/conceptual"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <AttachFile className="icon" />
-            Conceptual Test
-          </Link>
-          <Link
-            to="/mentorship"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <PeopleAlt className="icon" />
-            Mentorship
-          </Link>
-          <Link to="/notes" className="li hover:bg-purple-500 hover:text-white">
-            <Notes className="icon" />
-            Notes
-          </Link>
-          <Link
-            to="/library"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <LibraryBooksSharpIcon className="icon" />
-            Library
-          </Link>
-          <Link
-            to="/revision"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <PreviewSharpIcon className="icon" />
-            Revision
-          </Link>
-          <Link
-            to="/projects"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <AccountTreeSharpIcon className="icon" />
-            Projects
-          </Link>
-          <Link
-            to="/certificate"
-            className="li hover:bg-purple-500 hover:text-white"
-          >
-            <CardMembershipSharpIcon className="icon" />
-            Certificates
-          </Link>
+          <List>
+            <Link to="/dashboard">
+              <ListItem button>
+                <ListItemIcon>
+                  <DashboardIcon />
+                </ListItemIcon>
+                <ListItemText>Dashboard</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/lectures">
+              <ListItem button>
+                <ListItemIcon>
+                  <Book />
+                </ListItemIcon>
+                <ListItemText>Lectures</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/conceptual">
+              <ListItem button>
+                <ListItemIcon>
+                  <AttachFile />
+                </ListItemIcon>
+                <ListItemText>Conceptual Test</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/mentorship">
+              <ListItem button>
+                <ListItemIcon>
+                  <PeopleAlt />
+                </ListItemIcon>
+                <ListItemText>Mentorship</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/notes">
+              <ListItem button>
+                <ListItemIcon>
+                  <Notes />
+                </ListItemIcon>
+                <ListItemText>Notes</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/library">
+              <ListItem button>
+                <ListItemIcon>
+                  <LibraryBooksSharpIcon />
+                </ListItemIcon>
+                <ListItemText>Library</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/revision">
+              <ListItem button>
+                <ListItemIcon>
+                  <PreviewSharpIcon />
+                </ListItemIcon>
+                <ListItemText>Revision</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/projects">
+              <ListItem button>
+                <ListItemIcon>
+                  <AccountTreeSharpIcon />
+                </ListItemIcon>
+                <ListItemText>Projects</ListItemText>
+              </ListItem>
+            </Link>
+            <Link to="/certificate">
+              <ListItem button>
+                <ListItemIcon>
+                  <CardMembershipSharpIcon />
+                </ListItemIcon>
+                <ListItemText>Certificates</ListItemText>
+              </ListItem>
+            </Link>
+          </List>
         </ul>
       </div>
     </div>

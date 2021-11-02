@@ -1,0 +1,30 @@
+.css-1gctnaj-MuiInputBase-input-MuiFilledInput-input {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding-top: 12px !important;
+    padding-right: 0;
+    padding-bottom: 8px;
+    padding-left: 12px;
+}
+
+.chats.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    border-radius: 0px !important;
+}
+
+.chats {
+    width: 750px;
+}

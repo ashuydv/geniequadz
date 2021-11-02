@@ -1,6 +1,6 @@
 import Header from "./components/header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Lectures from "./components/pages/Lectures/Lectures";
 import Conceptual from "./components/pages/Conceptual/Conceptual";
@@ -13,6 +13,8 @@ import Notes from "./components/pages/Notes/Notes";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import Live from "./components/pages/Live/Live";
+import Test from "./components/pages/Conceptual/Test";
+import meet45mins from "./components/pages/Mentorship/meet45mins";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
               <Route path="/projects" component={Project} />
               <Route path="/certificate" component={Certificate} />
               <Route path="/live" component={Live} />
+              <Route path="/test" component={Test} />
+              <Route path="/45mins" component={meet45mins} />
             </Switch>
           </div>
         </div>
